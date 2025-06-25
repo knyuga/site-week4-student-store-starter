@@ -4,9 +4,14 @@ const port = 3000;
 const productRoutes = require('../routes/productRoutes.js');
 const orderRoutes = require('../routes/orderRoutes.js');
 const orderItemRoutes = require('../routes/orderItemRoutes.js')
+const cors = require("cors");
+
 app.use(express.json())
 
-
+const corsOption = {
+  origin: "http://localhost:5173",
+};
+app.use(cors(corsOption));
 
 app.get('/', (req, res) => {
     console.log('Received a request at /');
@@ -21,5 +26,4 @@ app.use('/api/products', productRoutes); // Use product routes for /api/products
 app.use('/api/orders', orderRoutes);
 // app.use('/api/orderItems', orderItemRoutes);
 app.use('/api/orders', orderItemRoutes);
-
 

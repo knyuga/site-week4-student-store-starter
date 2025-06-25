@@ -6,18 +6,22 @@ import Sidebar from "../Sidebar/Sidebar";
 import Home from "../Home/Home";
 import ProductDetail from "../ProductDetail/ProductDetail";
 import NotFound from "../NotFound/NotFound";
-import { removeFromCart, addToCart, getQuantityOfItemInCart, getTotalItemsInCart } from "../../utils/cart";
+import {
+  removeFromCart,
+  addToCart,
+  getQuantityOfItemInCart,
+  getTotalItemsInCart,
+} from "../../utils/cart";
 import "./App.css";
 
 function App() {
-
   // State variables
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [activeCategory, setActiveCategory] = useState("All Categories");
   const [searchInputValue, setSearchInputValue] = useState("");
-  const [userInfo, setUserInfo] = useState({ name: "", dorm_number: ""});
+  const [userInfo, setUserInfo] = useState({ name: "", dorm_number: "" });
   const [products, setProducts] = useState([]);
-  const [cart, setCart] = useState({});
+  const [cart, setCart] = useState({}); // object that acts like a dictionary seperate by commas
   const [isFetching, setIsFetching] = useState(false);
   const [isCheckingOut, setIsCheckingOut] = useState(false);
   const [error, setError] = useState(null);
@@ -36,9 +40,123 @@ function App() {
     setSearchInputValue(event.target.value);
   };
 
-  const handleOnCheckout = async () => {
-  }
+  // In App.jsx implement the useEffect hook to fetch products from http://localhost:3000/products and update the products state
+  useEffect(() => {
+    // use state -   const [products, setProducts] = useState([]);
+    // use effect should be use to trigger the state
+    // fetch request from local host 3000/products
+    // After receiving the data, you update the products state variable with the list of products.
+    console.log("inside useeffect");
+    const fetchProducts = async () => {
+      // async must be used in a function not use effect
+      console.log("inside fetchproduct");
+      try {
+        const { data } = await axios.get(`http://localhost:3000/api/products`);
+        console.log(data);
+        setProducts(data);
+        console.log();
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    };
+    fetchProducts();
+  }, []); // dependency array empty, so this should only run once
 
+  // In App.jsx update handleOnCheckout function; set isCheckingOut to true, create an order with the cart items, make a POST request to
+  // http://localhost:3000/orders, handle success and error responses, and
+  // reset the cart.
+  const handleOnCheckout = async () => {
+    setIsCheckingOut(true);
+    // create an order with the cart items
+    // loop through the cart and items to order
+
+    // added an order payload - how we did json on backend - and made an order using create order
+    const dormNumber = parseInt(userInfo.dorm_number);
+    const orderPayload = {
+      customer_id: dormNumber,
+      total_price: 0,
+      status: "pending",
+    };
+    console.log("This is ze order payload:", orderPayload);
+    const response = await axios.post(
+      `http://localhost:3000/api/orders`,
+      orderPayload
+    );
+
+    const orderId = response.data;
+    console.log(orderId.order_id);
+    for (const [productId, quantity] of Object.entries(cart)) {
+      const product_id = parseInt(productId, 10);
+      const product = products.find((p) => p.id === product_id);
+
+      await axios.post(
+        `http://localhost:3000/api/orders/${orderId.order_id}/items`,
+        {
+          items: [
+            {
+              product_id: product.id,
+              quantity: quantity,
+              price: product.price,
+            },
+          ],
+        });
+
+      // find it
+      // post it
+    } // productId is the key (as a string), quantity is the value
+
+    // cart is an object that acts like a dictionary seperated by commas
+    // has product_id : quantity
+
+    // since i have a productid i need to send in the dictionary to create order
+    // using product_id and quantity
+
+    // so just call create order and send in the items?
+
+    // const items = [];
+
+    // console.log(cart);
+
+    // // populate array with order_id, product_id, quantity, price
+    // for (const [productId, quantity] of Object.entries(cart)){ // productId is the key (as a string), quantity is the value
+    //   console.log("Product ID:", productId, "Quantity:", quantity);
+    //     const productMapping = products.reduce((acc, item) => {
+    //       acc[item.id] = item;
+    //       return acc;
+    //     }, {});
+    //   const product = productMapping[productId];
+    //   if (product){
+    //     items.push ({
+    //       order_id,
+    //       product_id: Number(productId),
+    //       quantity: Number(quantity),
+    //       price: product.price
+    //     })
+    //   }
+
+    // }
+
+    // const makeOrder = async() => {
+    //   console.log("calling make order on the front end side");
+    //   try {
+    //     const response = await axios.post("http://localhost:3000/orders", { cart });
+    //     console.log(response)
+    //   } catch (error) {
+    //     console.error('Error fetching products:', error);
+    //   }
+    // }
+
+    // things i already have = create order and add item to order methods
+    // create order requires a customer id and status in the body - where does that come from
+    // after i create the order
+
+    // add item to order requires order id in the route, how do i get that from create route
+    // it also needs product-id, quantity, and price --- these are accessible through cart and product something
+
+    // make an empty order, and then save the order id
+
+    // make an item array to hold the item and quantity in cart and pass that in to add item by order
+  };
 
   return (
     <div className="App">
@@ -116,4 +234,3 @@ function App() {
 }
 
 export default App;
- 

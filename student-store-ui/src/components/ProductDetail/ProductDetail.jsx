@@ -13,6 +13,23 @@ function ProductDetail({ addToCart, removeFromCart, getQuantityOfItemInCart }) {
   const [error, setError] = useState(null);
 
 
+  //useEffect hook to fetch product details from http://localhost:3000/products/${productId} and update the product state.
+  useEffect(() => {
+    console.log("inside use effect - product detail")
+    const fetchProducts = async () => { // async must be used in a function not use effect
+        console.log("inside fetchproduct  - product detail")
+        try {
+          const {data} = await axios.get(`http://localhost:3000/api/products/${productId}`);
+          console.log(data)
+          setProduct(data);
+          console.log();
+        } catch (error) {
+          console.error('Error fetching products:', error);
+        }
+      };
+      fetchProducts();
+  }, []);
+
   if (error) {
     return <NotFound />;
   }
@@ -34,6 +51,8 @@ function ProductDetail({ addToCart, removeFromCart, getQuantityOfItemInCart }) {
       removeFromCart(product);
     }
   };
+
+
 
   return (
     <div className="ProductDetail">

@@ -4,7 +4,11 @@ const prisma = new PrismaClient();
 // Create an new order
 const createOrder = async (req, res) => {
   console.log("Creating a new order");
-  const { customer_id, status, items } = req.body;
+  const { customer_id, total_price, status } = req.body;
+  // const {pro}
+  // Get the products according to the ids 
+
+  // create the orderItems array 
 
   if (!status || !customer_id) {
     return res
@@ -16,6 +20,7 @@ const createOrder = async (req, res) => {
     const order = await prisma.order.create({
       data: {
         customer_id,
+        total_price,
         status,
       },
     });
@@ -237,6 +242,15 @@ const calculateTotal = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
+
+const createOrderFrontEnd = async (req, res) => {
+  console.log("creating anew order through infor from the front end")
+  const { customer_id, status } = req.body;
+
+
+}
+
+
 
 module.exports = {
   createOrder,
