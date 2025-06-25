@@ -28,7 +28,8 @@ const createProduct = async (req, res) => {
     }
     console.log("Product created successfully");
 }
-// Read a product by ID & // Read all products
+
+// Read a product by ID 
 const getProductById = async (req, res) => {
     console.log("Getting product by ID");
     const { id } = req.params;
@@ -48,6 +49,7 @@ const getProductById = async (req, res) => {
     console.log("Product ID:", id);
 }
 
+// Read all products
 const getAllProducts = async (req, res) => {
     console.log("Getting all products");
     try {
@@ -135,7 +137,6 @@ const deleteProduct = async (req, res) => {
         res.status(500).json({error: error.message})
     }
 }
-
 
 module.exports = {
     createProduct,
