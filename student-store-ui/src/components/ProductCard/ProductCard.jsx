@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import codepath from "../../assets/codepath.svg"
+import codepath from "../../assets/mini_Texas.png"
 import { formatPrice } from "../../utils/format"
 import "./ProductCard.css"
 

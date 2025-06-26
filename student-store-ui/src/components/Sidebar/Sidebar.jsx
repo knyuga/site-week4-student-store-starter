@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import ShoppingCart from "../ShoppingCart/ShoppingCart"
-import logo from "../../assets/codepath.svg"
+import logo from "../../assets/mini_Texas.png"
 import "./Sidebar.css"
 
 
