@@ -224,9 +224,13 @@ const calculateTotal = async (req, res) => {
 
     // Calculate total cost
     let total = 0;
+    let tax = 1.0875
     for (const item of orderItems) {
       total += item.quantity * item.price;
     }
+    total *= tax;
+    total = total.toFixed(2); // shouout to luis, rounds decimals to 2
+
 
     // update order in db
     const order = await prisma.order.update({

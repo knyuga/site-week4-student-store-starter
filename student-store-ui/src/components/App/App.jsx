@@ -101,10 +101,28 @@ function App() {
           ],
         });
     }
+
+
+    const totalCalculated = await axios.get (
+      `http://localhost:3000/api/orders/${orderId.order_id}/total`
+    )
+
+    const orderCostPayload= {
+      customer_id: dormNumber,
+      total_price: totalCalculated,
+      status: "total calculated",
+    };
+
+    await axios.put (
+      `http://localhost:3000/api/orders/${orderId.order_id}`
+    )
+
     console.log("Shopping over, resetting values");
     setUserInfo({name: "", dorm_number: "" }) ;
     setIsCheckingOut(false);
     setCart({});
+    setSidebarOpen(false);
+
 
   };
 
