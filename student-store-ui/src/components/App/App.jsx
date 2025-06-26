@@ -100,7 +100,12 @@ function App() {
             },
           ],
         });
-    } 
+    }
+    console.log("Shopping over, resetting values");
+    setUserInfo({name: "", dorm_number: "" }) ;
+    setIsCheckingOut(false);
+    setCart({});
+
   };
 
   return (
