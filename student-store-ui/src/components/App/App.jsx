@@ -100,62 +100,7 @@ function App() {
             },
           ],
         });
-
-      // find it
-      // post it
-    } // productId is the key (as a string), quantity is the value
-
-    // cart is an object that acts like a dictionary seperated by commas
-    // has product_id : quantity
-
-    // since i have a productid i need to send in the dictionary to create order
-    // using product_id and quantity
-
-    // so just call create order and send in the items?
-
-    // const items = [];
-
-    // console.log(cart);
-
-    // // populate array with order_id, product_id, quantity, price
-    // for (const [productId, quantity] of Object.entries(cart)){ // productId is the key (as a string), quantity is the value
-    //   console.log("Product ID:", productId, "Quantity:", quantity);
-    //     const productMapping = products.reduce((acc, item) => {
-    //       acc[item.id] = item;
-    //       return acc;
-    //     }, {});
-    //   const product = productMapping[productId];
-    //   if (product){
-    //     items.push ({
-    //       order_id,
-    //       product_id: Number(productId),
-    //       quantity: Number(quantity),
-    //       price: product.price
-    //     })
-    //   }
-
-    // }
-
-    // const makeOrder = async() => {
-    //   console.log("calling make order on the front end side");
-    //   try {
-    //     const response = await axios.post("http://localhost:3000/orders", { cart });
-    //     console.log(response)
-    //   } catch (error) {
-    //     console.error('Error fetching products:', error);
-    //   }
-    // }
-
-    // things i already have = create order and add item to order methods
-    // create order requires a customer id and status in the body - where does that come from
-    // after i create the order
-
-    // add item to order requires order id in the route, how do i get that from create route
-    // it also needs product-id, quantity, and price --- these are accessible through cart and product something
-
-    // make an empty order, and then save the order id
-
-    // make an item array to hold the item and quantity in cart and pass that in to add item by order
+    } 
   };
 
   return (

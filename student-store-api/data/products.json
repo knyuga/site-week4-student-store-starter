@@ -4,7 +4,7 @@
         "id": 1,
         "name": "College Hoodie",
         "category": "Apparel",
-        "image_url": "https://tinyurl.com/college-hoodie",
+        "image_url": "https://images.stockx.com/images/Travis-Scott-x-Mitchell-Ness-Texas-Longhorns-Overlap-Pullover-Hoodie-Black.jpg?fit=fill&bg=FFFFFF&w=700&h=500&fm=webp&auto=compress&q=90&dpr=2&trim=color&updated_at=1712333729",
         "description": "Comfortable and stylish hoodie with the college logo.",
         "price": 29.99
       },
@@ -12,7 +12,7 @@
         "id": 2,
         "name": "Algebra Textbook",
         "category": "Books",
-        "image_url": "https://tinyurl.com/algebra-book",
+        "image_url": "https://m.media-amazon.com/images/I/61KBhWxpjIL._UF1000,1000_QL80_.jpg",
         "description": "Comprehensive textbook covering all aspects of algebra.",
         "price": 59.99
       },
@@ -20,7 +20,7 @@
         "id": 3,
         "name": "College Notebook",
         "category": "Supplies",
-        "image_url": "https://tinyurl.com/college-notebook",
+        "image_url": "https://ih1.redbubble.net/image.5595397664.2262/sn,x600-pad,600x600,f8f8f8.u1.jpg",
         "description": "Durable notebook with college branding, perfect for note-taking.",
         "price": 6.99
       },
@@ -28,7 +28,7 @@
         "id": 4,
         "name": "College Pen",
         "category": "Supplies",
-        "image_url": "https://tinyurl.com/college-pen",
+        "image_url": "https://www.universitycoop.com/media/product-images/12124242-default-2.jpg?resizeid=3&resizeh=720&resizew=480",
         "description": "Smooth-writing pen with college logo, ideal for writing and exams.",
         "price": 1.99
       },
@@ -36,7 +36,7 @@
         "id": 5,
         "name": "College Mug",
         "category": "Accessories",
-        "image_url": "https://tinyurl.com/college-mug",
+        "image_url": "https://images.footballfanatics.com/texas-longhorns/texas-longhorns-24oz-ceramic-stein-cup-with-gift-box_ss5_p-201279985+u-kqmqyk6dptxv1lyw1aez+v-jkt5svongbqhemnjfc92.jpeg?_hv=2&w=400",
         "description": "Ceramic mug with college emblem, perfect for coffee or tea.",
         "price": 9.99
       },
@@ -44,7 +44,7 @@
         "id": 6,
         "name": "College Beanie",
         "category": "Apparel",
-        "image_url": "https://tinyurl.com/college-beanie",
+        "image_url": "https://i.ebayimg.com/images/g/NuIAAOSwcChhbbh5/s-l400.png",
         "description": "Warm and cozy beanie with the college logo, perfect for cold weather.",
         "price": 14.99
       },
@@ -52,7 +52,7 @@
         "id": 7,
         "name": "Energy Drink",
         "category": "Snacks",
-        "image_url": "https://tinyurl.com/cp-energy-drink",
+        "image_url": "https://i5.walmartimages.com/asr/3bc683fe-add1-4a63-af67-f5e6c84338fc.b5d5b17a5c6c2267ef5fc3075367731c.jpeg",
         "description": "Refreshing energy drink to keep you focused during long study sessions.",
         "price": 2.99
       },
@@ -60,7 +60,7 @@
         "id": 8,
         "name": "Chocolate Bar",
         "category": "Snacks",
-        "image_url": "https://tinyurl.com/cp-chocolate-bar",
+        "image_url": "https://www.chocolate.lindt.com/media/catalog/product/a/1/a1fdd2a912be72e77347555ee13bbed5f9df27c7f7c7b583bcfb29a212d14cf1.jpeg?quality=80&fit=bounds&height=700&width=700&canvas=700:700",
         "description": "Delicious chocolate bar for a quick snack between classes.",
         "price": 1.49
       },
@@ -68,7 +68,7 @@
         "id": 9,
         "name": "Granola Bar",
         "category": "Snacks",
-        "image_url": "https://tinyurl.com/cp-granola-bar",
+        "image_url": "https://prodcontent.naturevalley.ca/wp-content/uploads/2019/05/crunchy-peanut-butter-en_460x460.png",
         "description": "Healthy granola bar, perfect for a quick energy boost.",
         "price": 1.29
       }

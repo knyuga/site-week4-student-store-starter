@@ -243,14 +243,17 @@ const calculateTotal = async (req, res) => {
   }
 };
 
-const createOrderFrontEnd = async (req, res) => {
-  console.log("creating anew order through infor from the front end")
-  const { customer_id, status } = req.body;
-
-
+const getOrderItems = async (req, res) => {
+  console.log("Getting all order items");
+  try {
+    const orderItems = await prisma.orderItem.findMany();
+    console.log("All order items retrieve successfully.");
+    console.log("Number of order items:", orderItems.length);
+    res.json(orderItems);
+  } catch (error) {
+    res.status(500).json({ error: error.message });
+  }
 }
-
-
 
 module.exports = {
   createOrder,
@@ -260,4 +263,5 @@ module.exports = {
   deleteOrder,
   addItemToOrder,
   calculateTotal,
+  getOrderItems,
 };

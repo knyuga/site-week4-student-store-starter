@@ -34,7 +34,6 @@ model Order {
   orderItems  OrderItem[]   // relation to OrderItem
 }
 
-
 // Customer ↔ Order = one-to-many
 // Order ↔ OrderItem = one-to-many
 // Product ↔ OrderItem = one-to-many

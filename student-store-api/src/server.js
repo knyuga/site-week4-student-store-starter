@@ -24,6 +24,6 @@ app.listen(port, () => {
 
 app.use('/api/products', productRoutes); // Use product routes for /api/products -- use this route and that variable is an entrypoint variable
 app.use('/api/orders', orderRoutes);
-// app.use('/api/orderItems', orderItemRoutes);
-app.use('/api/orders', orderItemRoutes);
+app.use('/api/orderItems', orderItemRoutes);
+
 
