@@ -109,13 +109,13 @@ function App() {
 
     const orderCostPayload= {
       customer_id: dormNumber,
-      total_price: totalCalculated,
+      total_price: totalCalculated.data.total,
       status: "total calculated",
     };
 
     await axios.put (
-      `http://localhost:3000/api/orders/${orderId.order_id}`
-    )
+      `http://localhost:3000/api/orders/${orderId.order_id}`, orderCostPayload
+    );
 
     console.log("Shopping over, resetting values");
     setUserInfo({name: "", dorm_number: "" }) ;
