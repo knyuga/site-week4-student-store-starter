@@ -1,5 +1,3 @@
-📝 `NOTE` Use this template to initialize the contents of a README.md file for your application. As you work on your assignment over the course of the week, update the required or stretch features lists to indicate which features you have completed by changing `[ ]` to `[x]`. (🚫 Remove this paragraph before submitting your assignment.)
-
 ## Unit Assignment: Student Store
 
 Submitted by: **Kenna Nyuga-Galega**
@@ -100,9 +98,10 @@ Deployed Application (optional): [Student Store Deployed Site](ADD_LINK_HERE)
 
 ### Walkthrough Video
 
-`TODO://` Add the embedded URL code to your animated app walkthrough below, `ADD_EMBEDDED_CODE_HERE`. Make sure the video or gif actually renders and animates when viewing this README. (🚫 Remove this paragraph after adding walkthrough video)
+Video 1 : https://www.loom.com/share/67aa3078fb014c2292cabd71e356efe7?sid=530db099-e673-4b22-9f7a-96d9adc0feae
+Video 2 : https://www.loom.com/share/58a70c21f54c426aaad6a14cdf707122?sid=a65f11be-14bc-43f6-b26f-4f1d991698a5
 
-`ADD_EMBEDDED_CODE_HERE`
+There are two videos because loom has a five minute maximum per video.
 
 ### Reflection
 
