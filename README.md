@@ -111,16 +111,17 @@ Deployed Application (optional): [Student Store Deployed Site](ADD_LINK_HERE)
 Yes, the labs were very helpful. They did help me prepare to complete the assignment. The first three labs really helepd me with setting up my nodd.js and routers I had. The only features I felt unprepared to complete were the  connecting of frontend to backend but Devarsh did a walkthrough of somehting similar in class which helped.
 
 * If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
-  The goal
+
+If I had more time, I would try and host my website on Render. When I was looking at the instructuons, it seemed like I had to connect my frontend, backend, database, and pgAdmin to render which is not something I felt I could do with the time I had left based on talking to other students. I also would have added a past orders page and made the CSS in general more seamless.
   
 * Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+This project demo, I did a lot better on time. I was more conscise with my presenting, while still showing functionality and features I enjoyed. I was also able to troubleshoot quickly when I found a bug while demoing my order page.
 
 ### Open-source libraries used
-
-- Add any links to open-source libraries used in your project.
+chatgpt.com, FTL Demo Github, https://www.prisma.io/docs/, https://learning.postman.com/docs/
 
 ### Shout out
 
-Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+Instructors: Keith, Lucia, Alex, and Devarsh
+Scholars: Jessica, Amari, Nathan, Jada, Joshua, Lilliana
